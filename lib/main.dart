@@ -109,14 +109,6 @@ class MyAppState extends State {
                 mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       ElevatedButton(onPressed: _multiplication,
-                      //     () {
-                      //   _multiplication;
-                      //   if(_formKey.currentState!.validate()  ) {
-                      //     ScaffoldMessenger.of(context).showSnackBar(
-                      //       const SnackBar(content: Text('Площадь успешно вычислена!'), backgroundColor: Colors.blueAccent,)
-                      //     );
-                      //   }
-                      // },
                           child: const Text('Вычислить'),
                       )
                     ],
@@ -126,12 +118,6 @@ class MyAppState extends State {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget> [
-                // if(length > 0)
-                // (
-                //     Text('S = $length * $height = ${length * height} (мм2)',
-                //       style: const TextStyle(
-                //           fontWeight: FontWeight.w500, fontSize: 26),),
-                // )
                 length > 0 && height > 0 && result > 0 && (length * height) == result  ? Text('S = $length * $height = $result (мм2)',
                     style: const TextStyle(
                         fontWeight: FontWeight.w500, fontSize: 26),)
