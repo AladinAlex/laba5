@@ -16,11 +16,21 @@ class MyAppState extends State {
 
   void _multiplication () {
     setState(() {
-      result = height * length;
-        if(_formKey.currentState!.validate()  ) {
+      if(length > 0 && height > 0) {
+        result = height * length;
+
+        if (_formKey.currentState!.validate()) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Площадь успешно вычислена!'), backgroundColor: Colors.blueAccent,)
+              const SnackBar(content: Text('Площадь успешно вычислена!'),
+                backgroundColor: Colors.blueAccent,)
           );
+        }
+      }
+      else
+        {
+          ScaffoldMessenger.of(context).showSnackBar(
+               const SnackBar(content: Text('Введите значение больше 0!'),
+                backgroundColor: Colors.red));
         }
     });
   }
